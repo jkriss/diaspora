@@ -8,6 +8,10 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   storage :s3
 
+  def cache_dir
+    "#{RAILS_ROOT}/tmp/uploads"
+  end
+
   def store_dir
     "uploads/images"
   end
