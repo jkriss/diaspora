@@ -9,7 +9,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :s3
 
   def cache_dir
-    "#{RAILS_ROOT}/tmp/uploads"
+    if ENV['S3_ACCESS_KEY']
+      "#{RAILS_ROOT}/tmp/uploads"
+    else
+      "uploads/images"
+    end
   end
 
   def store_dir
