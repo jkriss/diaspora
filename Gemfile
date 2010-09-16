@@ -38,6 +38,7 @@ gem 'thin'
 #File uploading
 gem 'carrierwave', :git => 'git://github.com/rsofaer/carrierwave.git' , :branch => 'master' #Untested mongomapper branch
 gem 'mini_magick'
+gem 'aws'
 
 group :test do
 	gem 'rspec', '>= 2.0.0.beta.17'
